@@ -1,4 +1,5 @@
 Always run as administrator
 
-Programmer: Mani Jabari
-Phone number for ordering and create a program: +989190161664
+Programmer: Pouriakr(Mani Jabari)
+Whats app number: +989190161664
+Email: manijabari85@yahoo.com
