@@ -15,10 +15,10 @@ def get_theme():
     set_theme(theme)
 
 def openLocation():
-    global Folder_Name
-    Folder_Name = filedialog.askdirectory()
+    global FOLDER_NAME
+    FOLDER_NAME = filedialog.askdirectory()
     path_entry.delete(0, END)
-    path_entry.insert(0, Folder_Name)
+    path_entry.insert(0, FOLDER_NAME)
 
 
 def check(*event):
@@ -67,12 +67,9 @@ def download_video():
         progress["value"] = 0
         vid_format = HTTP_REQUESTS.get_format()
         vid_path = vid_title + "." + vid_format
-        if lo != "":
-            global Folder_Name
-            Folder_Name = filedialog.askdirectory()
-            path_entry.delete(0, END)
-            path_entry.insert(0, Folder_Name)
-            lo = path_text.get()
+        if lo == "":
+            folder_name = filedialog.askdirectory()
+            lo = folder_name
             vid_path = lo + "/" + vid_title + "." + vid_format
         with open(vid_path, "wb") as file:
             for data in response.iter_content(block_size):
